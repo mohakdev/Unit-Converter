@@ -10,4 +10,5 @@
     <color name="red">#E74459</color>
     <color name="Bgcolor">#EAEBF0</color>
     <color name="dark_Red">#FF1836</color>
+    <color name="txt_black">#524E4E</color>
 </resources>
