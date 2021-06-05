@@ -22,4 +22,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WeightActivity.class);
         startActivity(intent);
     }
+
+    public void openTimePage(View view) {
+    }
+
+    public void openDigitalPage(View view) {
+    }
 }
