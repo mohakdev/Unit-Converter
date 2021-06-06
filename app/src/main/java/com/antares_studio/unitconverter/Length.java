@@ -31,14 +31,14 @@ public class Length extends AppCompatActivity {
         ArrayList<String> secondSpinnerItems = new ArrayList<>();
         ArrayList<String> firstSpinnerItems = new ArrayList<>();
         //Adding items to both arrays
-        secondSpinnerItems.add("Centimeter");
-        secondSpinnerItems.add("Millimeter");
-        secondSpinnerItems.add("Meter");
-        secondSpinnerItems.add("Kilometer");
         firstSpinnerItems.add("Centimeter");
         firstSpinnerItems.add("Millimeter");
         firstSpinnerItems.add("Meter");
         firstSpinnerItems.add("Kilometer");
+        secondSpinnerItems.add("Centimeter");
+        secondSpinnerItems.add("Millimeter");
+        secondSpinnerItems.add("Meter");
+        secondSpinnerItems.add("Kilometer");
         //Making array adapters for both arrays
         ArrayAdapter<String> secondSpinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,secondSpinnerItems);
         ArrayAdapter<String> firstSpinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,firstSpinnerItems);
@@ -49,16 +49,15 @@ public class Length extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
     @SuppressLint("SetTextI18n")
     public void Calculate(View view) {
-        //Defining all the important values
-        Calculate cal = new Calculate();
-        String first_val = firstSpinner.getSelectedItem().toString();
-        String second_val = SecondSpinner.getSelectedItem().toString();
-        Integer ans_into_int = Integer.valueOf(UserAnswer.getText().toString());
         //If by chance user enter a string we will catch it by using try catch
         try {
+            //Defining all the important values
+            Calculate cal = new Calculate();
+            String first_val = firstSpinner.getSelectedItem().toString();
+            String second_val = SecondSpinner.getSelectedItem().toString();
+            Integer ans_into_int = Integer.valueOf(UserAnswer.getText().toString());
             if (first_val.equals("Millimeter")){
                 switch(second_val){
                     case "Millimeter":{
@@ -154,7 +153,7 @@ public class Length extends AppCompatActivity {
 
         }
         catch(Exception e){
-            Toast.makeText(this, "An error occurred", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "TextBox does not contain any numbers", Toast.LENGTH_SHORT).show();
         }
     }
 }
