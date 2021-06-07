@@ -65,18 +65,21 @@ public class Length extends AppCompatActivity {
                         break;
                     }
                     case "Centimeter": {
-                        Integer ans = cal.calculate(ans_into_int, "divide", 10);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 10);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Meter":{
-                        Integer ans = cal.calculate(ans_into_int, "divide", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Kilometer":{
-                        Integer ans = cal.calculate(ans_into_int, "divide", 1000000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 1000000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                 }
@@ -84,8 +87,9 @@ public class Length extends AppCompatActivity {
             if (first_val.equals("Centimeter")){
                 switch (second_val) {
                     case "Millimeter": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 10);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 10);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Centimeter": {
@@ -93,13 +97,15 @@ public class Length extends AppCompatActivity {
                         break;
                     }
                     case "Meter": {
-                        Integer ans = cal.calculate(ans_into_int, "divide", 100);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 100);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Kilometer": {
-                        Integer ans = cal.calculate(ans_into_int, "divide", 100000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 100000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                 }
@@ -107,13 +113,15 @@ public class Length extends AppCompatActivity {
             if (first_val.equals("Meter")){
                 switch (second_val) {
                     case "Millimeter": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Centimeter": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 100);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 100);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Meter": {
@@ -121,8 +129,9 @@ public class Length extends AppCompatActivity {
                         break;
                     }
                     case "Kilometer": {
-                        Integer ans = cal.calculate(ans_into_int, "divide", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                 }
@@ -130,18 +139,21 @@ public class Length extends AppCompatActivity {
             if (first_val.equals("Kilometer")){
                 switch (second_val) {
                     case "Millimeter": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 1000000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 1000000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Centimeter": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 100);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 100);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Meter": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "Kilometer": {

@@ -4,7 +4,7 @@ public class Calculate {
     public Calculate() {
 
     }
-    public Integer calculate(Integer userAnswer, String operator, Integer by){
+    public float calculate(Integer userAnswer, String operator, float by){
         if (operator.equals("multiply")){
             return userAnswer*by;
         }
@@ -12,7 +12,7 @@ public class Calculate {
             return  userAnswer/by;
         }
         else{
-            return null;
+            return userAnswer;
         }
     }
 }

@@ -35,7 +35,7 @@ public class WeightActivity extends AppCompatActivity {
         firstSpinnerItems.add("kilogram");
         firstSpinnerItems.add("pound");
         firstSpinnerItems.add("tonne");
-        //*****************************
+        //********************************
         secondSpinnerItems.add("gram");
         secondSpinnerItems.add("kilogram");
         secondSpinnerItems.add("pound");
@@ -68,18 +68,21 @@ public class WeightActivity extends AppCompatActivity {
                         break;
                     }
                     case "kilogram": {
-                        Integer ans = cal.calculate(ans_into_int, "divide", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "pound":{
-                        Integer ans = cal.calculate(ans_into_int, "divide", 454);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 454);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "tonne":{
-                        Integer ans = cal.calculate(ans_into_int, "divide", 1000000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 1000000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                 }
@@ -87,8 +90,9 @@ public class WeightActivity extends AppCompatActivity {
             if (first_val.equals("kilogram")){
                 switch (second_val) {
                     case "gram": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "kilogram": {
@@ -96,13 +100,15 @@ public class WeightActivity extends AppCompatActivity {
                         break;
                     }
                     case "pound": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 2);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 2.205f);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "tonne": {
-                        Integer ans = cal.calculate(ans_into_int, "divide", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                 }
@@ -110,13 +116,15 @@ public class WeightActivity extends AppCompatActivity {
             if (first_val.equals("pound")){
                 switch (second_val) {
                     case "gram": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 454);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 454);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "kilogram": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 2);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 2.205f);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "pound": {
@@ -124,8 +132,9 @@ public class WeightActivity extends AppCompatActivity {
                         break;
                     }
                     case "tonne": {
-                        Integer ans = cal.calculate(ans_into_int, "divide", 2205);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "divide", 2205);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                 }
@@ -133,18 +142,21 @@ public class WeightActivity extends AppCompatActivity {
             if (first_val.equals("tonne")){
                 switch (second_val) {
                     case "gram": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 1000000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 1000000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "kilogram": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 1000);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 1000);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "pound": {
-                        Integer ans = cal.calculate(ans_into_int, "multiply", 2205);
-                        answerTxt.setText(ans.toString());
+                        float ans = cal.calculate(ans_into_int, "multiply", 2205);
+                        String ans_in_string = String.valueOf(ans);
+                        answerTxt.setText(ans_in_string);
                         break;
                     }
                     case "tonne": {
