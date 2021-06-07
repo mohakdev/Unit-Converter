@@ -19,6 +19,7 @@ public class WeightActivity extends AppCompatActivity {
     Spinner firstSpinner;
     Spinner SecondSpinner;
     TextView answerTxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +42,8 @@ public class WeightActivity extends AppCompatActivity {
         secondSpinnerItems.add("pound");
         secondSpinnerItems.add("tonne");
         //Making array adapters for both arrays
-        ArrayAdapter<String> secondSpinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,secondSpinnerItems);
-        ArrayAdapter<String> firstSpinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,firstSpinnerItems);
+        ArrayAdapter<String> secondSpinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, secondSpinnerItems);
+        ArrayAdapter<String> firstSpinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, firstSpinnerItems);
         firstSpinner.setAdapter(firstSpinnerAdapter);
         SecondSpinner.setAdapter(secondSpinnerAdapter);
     }
@@ -61,9 +62,9 @@ public class WeightActivity extends AppCompatActivity {
             String first_val = firstSpinner.getSelectedItem().toString();
             String second_val = SecondSpinner.getSelectedItem().toString();
             Integer ans_into_int = Integer.valueOf(UserAnswer.getText().toString());
-            if (first_val.equals("gram")){
-                switch(second_val){
-                    case "gram":{
+            if (first_val.equals("gram")) {
+                switch (second_val) {
+                    case "gram": {
                         answerTxt.setText(UserAnswer.getText().toString());
                         break;
                     }
@@ -73,13 +74,13 @@ public class WeightActivity extends AppCompatActivity {
                         answerTxt.setText(ans_in_string);
                         break;
                     }
-                    case "pound":{
+                    case "pound": {
                         float ans = cal.calculate(ans_into_int, "divide", 454);
                         String ans_in_string = String.valueOf(ans);
                         answerTxt.setText(ans_in_string);
                         break;
                     }
-                    case "tonne":{
+                    case "tonne": {
                         float ans = cal.calculate(ans_into_int, "divide", 1000000);
                         String ans_in_string = String.valueOf(ans);
                         answerTxt.setText(ans_in_string);
@@ -87,7 +88,7 @@ public class WeightActivity extends AppCompatActivity {
                     }
                 }
             }
-            if (first_val.equals("kilogram")){
+            if (first_val.equals("kilogram")) {
                 switch (second_val) {
                     case "gram": {
                         float ans = cal.calculate(ans_into_int, "multiply", 1000);
@@ -113,7 +114,7 @@ public class WeightActivity extends AppCompatActivity {
                     }
                 }
             }
-            if (first_val.equals("pound")){
+            if (first_val.equals("pound")) {
                 switch (second_val) {
                     case "gram": {
                         float ans = cal.calculate(ans_into_int, "multiply", 454);
@@ -139,7 +140,7 @@ public class WeightActivity extends AppCompatActivity {
                     }
                 }
             }
-            if (first_val.equals("tonne")){
+            if (first_val.equals("tonne")) {
                 switch (second_val) {
                     case "gram": {
                         float ans = cal.calculate(ans_into_int, "multiply", 1000000);
@@ -166,8 +167,7 @@ public class WeightActivity extends AppCompatActivity {
                 }
             }
 
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             Toast.makeText(this, "TextBox does not contain any numbers", Toast.LENGTH_SHORT).show();
         }
     }
