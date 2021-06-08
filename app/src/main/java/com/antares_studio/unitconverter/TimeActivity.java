@@ -50,7 +50,7 @@ public class TimeActivity extends AppCompatActivity {
     }
 
     public void timeToMain(View view) {
-        Intent intent = new Intent(this, TimeActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
@@ -119,7 +119,7 @@ public class TimeActivity extends AppCompatActivity {
                         break;
                     }
                     case "year": {
-                        float ans = cal.calculate(ans_into_int, "divide",  525600);
+                        float ans = cal.calculate(ans_into_int, "divide", 525600);
                         String ans_in_string = String.valueOf(ans);
                         answerTxt.setText(ans_in_string);
                         break;

@@ -31,5 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openDigitalPage(View view) {
+        Intent intent = new Intent(this, DigitalStorageActivity.class);
+        startActivity(intent);
     }
 }
