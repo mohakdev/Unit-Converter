@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //To pass float as parameter in calculate class method add an f in last
+    //The lines below will open pages of different units as you click on them
     public void openLengthPage(View view) {
         Intent intent = new Intent(this, Length.class);
         startActivity(intent);
